@@ -25,7 +25,7 @@ eval("const MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src
   \******************************/
 /***/ ((module) => {
 
-eval("// function MovingObject (pos, val, radius, color) {\n//     this.pos = pos;\n//     this.val = val;\n//     this.radius = radius;\n//     this.color = color;\n// }\n\nfunction MovingObject(object) {\n    this.pos = object.pos;\n    this.vel = object.vel;\n    this.radius = object.radius;\n    this.color = object.color;\n}\n\nMovingObject.prototype.draw = function (ctx) {\n    ctx.beginPath();\n    ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true);\n    ctx.strokeStyle = \"white\";\n    ctx.lineWidth = 30;\n    ctx.stroke();\n    ctx.fillStyle = this.color;\n    ctx.fill();\n};\n\nmodule.exports = MovingObject;\n\n//# sourceURL=webpack://asteroids_project/./src/moving_object.js?");
+eval("// function MovingObject (pos, val, radius, color) {\n//     this.pos = pos;\n//     this.val = val;\n//     this.radius = radius;\n//     this.color = color;\n// }\n\nfunction MovingObject(object) {\n    this.pos = object.pos;\n    this.vel = object.vel;\n    this.radius = object.radius;\n    this.color = object.color;\n}\n\nMovingObject.prototype.draw = function (ctx) {\n    ctx.beginPath();\n    ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true);\n    ctx.strokeStyle = \"white\";\n    ctx.lineWidth = 30;\n    ctx.stroke();\n    ctx.fillStyle = this.color;\n    ctx.fill();\n};\n\nMovingObject.prototype.move = function () {\n    this.pos[0] += this.vel[0];\n    this.pos[1] += this.vel[1];\n    return this.pos;\n};\n\n\nmodule.exports = MovingObject;\n\n//# sourceURL=webpack://asteroids_project/./src/moving_object.js?");
 
 /***/ })
 
