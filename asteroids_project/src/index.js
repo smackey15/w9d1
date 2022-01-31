@@ -1,14 +1,13 @@
 const MovingObject = require("./moving_object.js");
 
-window.MovingObject = MovingObject;
 
+document.addEventListener("DOMContentLoaded", () => {
+    const canvasEl = document.getElementById("game-canvas");
+    canvasEl.width = 500;
+    canvasEl.height = 500;
+    
+    const ctx = canvasEl.getContext("2d"); 
+    window.ctx = ctx;
+});
 
-console.log("Webpack is working!");
-
-// const mo = new MovingObject({
-//     pos: [30, 30],
-//     vel: [10, 10],
-//     radius: 5,
-//     color: "#00FF00"
-//   });
-//   console.log(mo);
+window.MovingObject = MovingObject;   
